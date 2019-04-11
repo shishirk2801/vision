@@ -144,8 +144,8 @@ while True:
             cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
     # show the frame
-
     cv2.imshow("Frame", frame)
+    #to warn someone that the person is drowsy using api
     if(COUNTER2>4):
         if(sent==0):
             account_sid = 'xxxxxxx'
@@ -161,6 +161,7 @@ while True:
 
             print(message.sid)
             sent=1
+    #to stop the car if the warning is more than 6 times
     if(COUNTER2>6):
         class timeApp(Tk):
             def __init__(self):
